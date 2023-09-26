@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/utc-survey-client/static/css/main.e64fd6fa.css",
+    "main.js": "/utc-survey-client/static/js/main.a056dfb6.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/utc-survey-client/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/UTC-logo.png": "/utc-survey-client/static/media/UTC-logo.e2fe8802ae388ef9bbab.png",
+    "index.html": "/utc-survey-client/index.html",
+    "main.e64fd6fa.css.map": "/utc-survey-client/static/css/main.e64fd6fa.css.map",
+    "main.a056dfb6.js.map": "/utc-survey-client/static/js/main.a056dfb6.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/utc-survey-client/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e64fd6fa.css",
+    "static/js/main.a056dfb6.js"
+  ]
+}
