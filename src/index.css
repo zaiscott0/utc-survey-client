@@ -1,13 +1,104 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import-normalize;
+
+body{
+  @apply bg-white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main{
+  @apply md:w-1/2  mx-auto shadow-xl rounded-2xl pb-2 bg-white;
 }
+
+.Navbar{
+  width: 5.8rem;
+  height: 4rem;
+  @apply flex justify-center m-2 bg-utc-logo bg-contain bg-center bg-no-repeat;
+}
+
+.container{
+  /*@apply w-full h-full;*/
+}
+
+.FormContainer{
+  @apply flex justify-around mx-4 p-4 items-center;
+}
+
+.DisplayContainer{
+  @apply relative flex flex-col items-center text-blue-600;
+}
+
+.formNumber{
+  @apply rounded-full transition duration-500 ease-in-out border-2 border-gray-300 h-9 w-9 flex items-center justify-center py-3;
+}
+
+.formDesc{
+  @apply absolute top-0 text-center mt-16 w-32 text-xs font-normal uppercase;
+}
+
+.formLine{
+  @apply flex-auto border-t-2 transition duration-500 ease-in-out;
+}
+
+.form-c{
+  @apply flex flex-col;
+}
+
+.form-box{
+  @apply w-full mx-2 flex-1;
+}
+
+.form-question{
+  @apply font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase
+}
+
+.form-input{
+  @apply bg-white my-2 p-1 flex flex-col items-center font-bold;
+}
+
+.form-select{
+  @apply border-b-2 border-blue-400;
+}
+
+.StepperControlContainer{
+  @apply flex justify-around mt-4 mb-8;
+}
+
+.btn{
+  @apply font-semibold py-0 px-0 rounded-full bg-blue-500 text-white uppercase cursor-pointer border-2 border-slate-300;
+}
+
+.btn-back{
+  
+  @apply font-semibold py-0 px-0 rounded-full bg-white text-white uppercase cursor-pointer  ;
+}
+
+.btn:hover{
+  @apply bg-blue-500 border-slate-700 transition duration-500 ease-in-out;
+}
+
+/*
+.btn-back:hover{
+  @apply border-2 border-slate-700 transition duration-500 ease-in-out;
+}
+*/
+
+.select-container{
+  @apply  w-full h-full m-4 grid grid-cols-6 grid-rows-4 gap-4 ;
+}
+
+.user-select{
+  
+  @apply  bg-blue-500 rounded-md text-white p-4;
+}
+
+.user-select-list{
+  
+  @apply  rounded-md text-white p-4;
+}
+
+
+
+
+
