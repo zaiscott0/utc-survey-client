@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy": "http://localhost:3001",
+  "proxy": "https://utc-survey-api.onrender.com/",
   "private": true,
   "homepage": ".",
   "dependencies": {
