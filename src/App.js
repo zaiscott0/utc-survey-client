@@ -48,7 +48,7 @@ function App() {
 
   // lets make a axios endpoint for updating data
   const api = axios.create({
-    baseURL: `http://localhost:3001/api/`
+    baseURL: `https://utc-survey-api.onrender.com/api`
   });
   async function getQuestionSteps () {
     let res = await api.get("/data");
