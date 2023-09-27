@@ -69,7 +69,7 @@ export default function Form1() {
           <motion.div variants={container} className='select-container justify-items-stretch'>
 
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Personal Goals" name="goal_focus" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Personal </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Relationship Goals" name="goal_focus" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 '> Relationship </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Relationship Goals" name="goal_focus" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 '> Relationships </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Academic Goals" name="goal_focus" className='user-select col-span-3 row-span-2   bg-cover focus:bg-blue-200 '> Academic </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Athletic Goals" name="goal_focus" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Athletic </motion.button>
             <motion.button whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Career Goals" name="goal_focus" className={` col-start-2 user-select col-span-4 row-span-2 focus:bg-blue-200 `}> Career </motion.button>
