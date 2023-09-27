@@ -47,12 +47,11 @@ export default function Form3() {
                 <select onChange={handleChange} value={userData["age_group"] || ""} name="age_group" className='Goal-Focus form-select' id="">
                     <option hidden value=""></option>
                     <option disabled value="">I am a:</option>
-                    <option>middle school student</option>
-                    <option>high school student</option>
-                    <option>college student</option>
-                    <option>military vet</option>
-                    <option>athlete</option>
-                    <option value="">adult</option>
+                    <option>Middle school student</option>
+                    <option>High school student</option>
+                    <option>Parent</option>
+                    <option>Teacher</option>
+                    <option>Administrator</option>
               </select>
             </p>
             <br/>
