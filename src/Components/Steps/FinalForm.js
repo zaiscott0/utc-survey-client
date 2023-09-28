@@ -38,7 +38,7 @@ export default function FinalForm() {
   }
   // lets make a axios endpoint for updating data
   const api = axios.create({
-    baseURL: `http://localhost:3001/user/`
+    baseURL: `https://utc-survey-api.onrender.com/user`
   });
   async function addUser () {
     let res = await api.post("/", userData);
