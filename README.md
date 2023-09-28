@@ -1,3 +1,5 @@
 # Visit the Site
 
-(https://zaiscott0.github.io/utc-survey-client/)
+Main: (https://utc-survey.onrender.com/)
+
+Github Pages: (https://zaiscott0.github.io/utc-survey-client/)
