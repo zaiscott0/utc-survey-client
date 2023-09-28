@@ -17,6 +17,8 @@ import Form8 from './Components/Steps/Form8';
 import Form9 from './Components/Steps/Form9';
 import Form10 from './Components/Steps/Form10';
 import Form11 from './Components/Steps/Form11';
+import Form12 from './Components/Steps/Form12';
+
 import axios from 'axios';
 
 
@@ -31,6 +33,7 @@ function App() {
   const [finalData, setFinalData] = useState([]);
   //console.log(currStep);
   const steps = [
+    "",
     "",
     "",
     "",
@@ -101,6 +104,8 @@ function App() {
       case 11:
         return <Form9/>
       case 12:
+        return <Form12/>
+      case 13:
         return <FinalForm/>
       default:
     }
