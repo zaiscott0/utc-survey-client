@@ -37,7 +37,7 @@ export default function Form3() {
         <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
           <span>
             <motion.p variants={item}>
-              I'm
+              I am
               <input onChange={handleChange} value={userData["age"] || ""} name='age' className=' p-1 px-2 appearance-none outline-none w-1/3 text-gray-800 form-select ' max={100} min={0} type="number" />
               years old
             </motion.p>
@@ -47,26 +47,15 @@ export default function Form3() {
                 <select onChange={handleChange} value={userData["age_group"] || ""} name="age_group" className='Goal-Focus form-select' id="">
                     <option hidden value=""></option>
                     <option disabled value="">I am a:</option>
-                    <option>Middle school student</option>
-                    <option>High school student</option>
-                    <option>Parent</option>
+                    <option>Middle School Student</option>
+                    <option> High School Guardian</option>
+                    <option>Parent/Guardian</option>
                     <option>Teacher</option>
                     <option>Administrator</option>
               </select>
             </p>
             <br/>
           </span>
-          <span>
-        
-            <p>
-              and would like my action plan emailed to...
-              
-            </p>
-            <input required onChange={handleChange} value={userData["email"]} type="email" name="email" placeholder='johndoe@gmail.com' className='form-select' id="" />
-
-              
-          </span>
-          
         </motion.div>
 
         
