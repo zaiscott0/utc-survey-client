@@ -57,7 +57,7 @@ export default function Form9() {
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Time-Management" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Time Management </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Physical-Challenge" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Physical Challenges </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Depression" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Depression </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Bitterness" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Anger </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Anger" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Anger </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Substance-Abuse" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Substance Abuse </motion.button>
 
           </motion.div>   
