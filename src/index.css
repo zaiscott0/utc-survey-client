@@ -12,9 +12,9 @@ body{
 }
 
 .Navbar{
-  width: 5.8rem;
-  height: 4rem;
-  @apply flex justify-center m-2 bg-utc-logo bg-contain bg-center bg-no-repeat;
+  width: 13rem;
+  height: 5rem;
+  @apply flex justify-center m-2 bg-pmm-logo bg-logo bg-center bg-no-repeat;
 }
 
 .container{
