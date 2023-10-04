@@ -5,6 +5,14 @@ module.exports = {
     extend: {
       backgroundImage: {
         'utc-logo': "url('Components/img/UTC-logo.png')",
+        'pmm-logo': "url(Components/img/PivotalMomentsMedia_LOGO_Dark.png)"
+      },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        'logo': '100%',
+        
       }
     },
   },
