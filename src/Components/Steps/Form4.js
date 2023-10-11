@@ -45,16 +45,19 @@ export default function Form4() {
         <motion.div variants={container} initial="hidden" animate="visible" className='form-input'>
           
           <motion.p variants={item}>
-          When you look in your community, how do you think most people feel that are around you?...🤔
+          When you look in your <b>COMMUNITY</b>, how do you think most people feel that are around you?...🤔
           </motion.p>
           <motion.input required variants={item} disabled onChange={handleChange} value={userData["future_feeling"] || ""} name="future_feeling" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Worried" name="future_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Worried 😟 </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Uncertain" name="future_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Uncertain 🫣 </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Calm" name="future_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Calm 😌 </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Confident" name="future_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Confident 😁 </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Uncertain" name="future_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Uncertain 🫣 </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Frustrated" name="future_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Frustrated 😖 </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Happy" name="future_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Happy 😊 </motion.button>
+
              
           </motion.div>   
           

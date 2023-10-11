@@ -44,7 +44,7 @@ export default function Form9() {
       <div className='form-box'>
 
         <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
-          <motion.p variants={item}> Take a look at these common statements. Click on the statement that's MOST important to you now.  </motion.p> <br/>
+          <motion.p variants={item}> Look at these statements. Click on the statement that's <b>MOST</b> important to <b>YOU</b> now.  </motion.p> <br/>
 
           <motion.input required variants={item} disabled onChange={handleChange} value={userData["statements"] || ""} name="statements" className='Goal-Focus form-select ' type='text'></motion.input>
 

@@ -43,7 +43,7 @@ export default function Form1() {
     <div className='form-c'>
       <div className='form-box'>
         <motion.div className='form-input' animate="visible" initial="hidden" variants={container}>
-
+          
           <span>
             <motion.p variants={item}>
               My name is... 
@@ -55,7 +55,9 @@ export default function Form1() {
           <span>
         
             <motion.p variants={item}>
-             and what matters to me right now is my...
+             and the issue that matters to me the most right now are my...
+             <br/>
+             <br/>
               
               <motion.input required variants={item} disabled onChange={handleChange} value={userData["goal_focus"] || ""} name="goal_focus" className='Goal-Focus form-select ' type='text'></motion.input>
                 
@@ -68,11 +70,11 @@ export default function Form1() {
           <br />
           <motion.div variants={container} className='select-container justify-items-stretch'>
 
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Personal Goals" name="goal_focus" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Personal </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Personal Goals" name="goal_focus" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Personal Goals </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Relationship Goals" name="goal_focus" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 '> Relationships </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Academic Goals" name="goal_focus" className='user-select col-span-3 row-span-2   bg-cover focus:bg-blue-200 '> Academic </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Athletic Goals" name="goal_focus" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Athletic </motion.button>
-            <motion.button whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Career Goals" name="goal_focus" className={` col-start-2 user-select col-span-4 row-span-2 focus:bg-blue-200 `}> Career </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Academic Goals" name="goal_focus" className='user-select col-span-3 row-span-2   bg-cover focus:bg-blue-200 '> Academic Goals </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Athletic Goals" name="goal_focus" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Athletic Goals </motion.button>
+            <motion.button whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Career Goals" name="goal_focus" className={` col-start-2 user-select col-span-4 row-span-2 focus:bg-blue-200 `}> Career Goals </motion.button>
 
 
           </motion.div>   

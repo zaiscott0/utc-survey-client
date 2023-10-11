@@ -45,7 +45,7 @@ export default function Form6() {
         <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
 
           <motion.p variants={item}>
-          When you talk to people about your feelings, how does the conversation usually go?
+          When you talk to people about <b>YOUR</b> feelings, how does the conversation usually go?
           </motion.p>
           <motion.input required variants={item} disabled onChange={handleChange} value={userData["goal_convo"] || ""} name="goal_convo" className=' form-select ' type='text'></motion.input>
 

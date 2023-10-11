@@ -75,7 +75,7 @@ export default function Form11() {
       <div className='form-box'>
 
         <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
-          <motion.p variants={item}> Take a look at these common issues. Click on every issue you’ve seen someone experience. 
+          <motion.p variants={item}> Look at these common challenges. Click on <b>EVERY</b> issue you’ve seen someone experience. 
  
  </motion.p> <br/>
 
@@ -86,10 +86,10 @@ export default function Form11() {
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Significance/Purpose" name="c_xp" className={`${userData["c_xp"].includes("Significance/Purpose") ?  btnClassName + " bg-blue-200" : btnClassName + " bg-blue-500"}`} > Significance & Purpose </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Significance/Purpose" name="c_xp" className={`${userData["c_xp"].includes("Significance/Purpose") ?  btnClassName + " bg-blue-200" : btnClassName + " bg-blue-500"}`} > Lack of Purpose </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Personal/Finances" name="c_xp" className={`${userData["c_xp"].includes("Personal/Finances") ?  btnClassName + " bg-blue-200" : btnClassName + " bg-blue-500"}`}> Personal / Financial Loss </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Divorce" name="c_xp" className={`${userData["c_xp"].includes("Divorce") ?  btnClassName + " bg-blue-200" : btnClassName + " bg-blue-500"}`}> Divorce </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Time-Management" name="c_xp" className={`${userData["c_xp"].includes("Time-Management") ?  btnClassName + " bg-blue-200" : btnClassName + " bg-blue-500"}`}> Time Management </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Time-Management" name="c_xp" className={`${userData["c_xp"].includes("Time-Management") ?  btnClassName + " bg-blue-200" : btnClassName + " bg-blue-500"}`}> Lack of Time Management </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Physical-Challenge" name="c_xp" className={`${userData["c_xp"].includes("Physical-Challenge") ?  btnClassName + " bg-blue-200" : btnClassName + " bg-blue-500"}`}> Physical Challenges </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Depression" name="c_xp" className={`${userData["c_xp"].includes("Depression") ?  btnClassName + " bg-blue-200" : btnClassName + " bg-blue-500"}`}> Depression </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Anger" name="c_xp" className={`${userData["c_xp"].includes("Anger") ?  btnClassName + " bg-blue-200" : btnClassName + " bg-blue-500"}`}> Anger </motion.button>

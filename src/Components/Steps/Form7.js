@@ -45,16 +45,19 @@ export default function Form4() {
         <motion.div variants={container} initial="hidden" animate="visible" className='form-input'>
           
           <motion.p variants={item}>
-          How do you feel about your mental health at this time?
+          How do you feel about <b>YOUR</b> mental health at this time?
           </motion.p>
           <motion.input required variants={item} disabled onChange={handleChange} value={userData["current_feeling"] || ""} name="current_feeling" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Worried" name="current_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Worried 😟 </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Uncertain" name="current_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Uncertain 🫣 </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Calm" name="current_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Calm 😌 </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Confident" name="current_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Confident 😁 </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Uncertain" name="current_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Uncertain 🫣 </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Frustrated" name="current_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Frustrated 😖 </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Content" name="current_feeling" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Content 😊 </motion.button>
+
              
           </motion.div>   
           

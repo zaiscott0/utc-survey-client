@@ -43,7 +43,7 @@ export default function Form5() {
         <motion.div variants={container} animate="visible" initial="hidden" className='form-input '>
 
           <motion.p variants={item}>
-          How would you say people handle their feelings most of the time? 
+          How would you say people handle <b>THEIR</b> feelings most of the time? 
           </motion.p>
           <motion.input required variants={item} disabled onChange={handleChange} value={userData["com_handler"] || ""} name="com_handler" className=' form-select ' type='text'></motion.input>
 
