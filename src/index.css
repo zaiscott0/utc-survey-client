@@ -22,7 +22,7 @@ body{
 }
 
 .FormContainer{
-  @apply flex justify-around mx-20 p-20 md:mx-4 md:p-4 items-center;
+  @apply flex justify-around mx-4 p-2 items-center;
 }
 
 .DisplayContainer{
