@@ -36,6 +36,18 @@ export default function Form3() {
       <div className='form-box'>
         <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
           <span>
+          <p>
+                I am a...
+                <select onChange={handleChange} value={userData["gender"] || ""} name="gender" className='Goal-Focus form-select' id="">
+                    <option hidden value=""></option>
+                    <option disabled value="">I am a:</option>
+                    <option>Male</option>
+                    <option> Female</option>
+                    <option>Other</option>
+                    <option>Prefer Not to Say</option>
+              </select>
+            </p>
+            <br></br>
             <motion.p variants={item}>
               I am
               <input onChange={handleChange} value={userData["age"] || ""} name='age' className=' p-1 px-2 appearance-none outline-none w-1/3 text-gray-800 form-select ' max={100} min={0} type="number" />

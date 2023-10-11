@@ -58,7 +58,7 @@ body{
 }
 
 .form-select{
-  @apply border-b-2 border-blue-400;
+  @apply border-b-2 border-blue-400 text-center;
 }
 
 .StepperControlContainer{
