@@ -22,7 +22,7 @@ body{
 }
 
 .FormContainer{
-  @apply flex justify-around mx-4 p-2 items-center;
+  @apply flex justify-around mx-10 p-4 items-center;
 }
 
 .DisplayContainer{
@@ -30,7 +30,7 @@ body{
 }
 
 .formNumber{
-  @apply rounded-full transition duration-500 ease-in-out border-2 border-gray-300 h-6 w-6 flex items-center justify-center py-3 px-3;
+  @apply rounded-full transition duration-500 ease-in-out border-2 border-gray-300 h-6 w-6 flex items-center justify-center ;
 }
 
 .formDesc{
