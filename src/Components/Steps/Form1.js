@@ -46,7 +46,7 @@ export default function Form1() {
 
           <span>
             <motion.p variants={item}>
-              Hello, my name is... 
+              My name is... 
               <motion.input required variants={item} onChange={handleChange} value={userData["first_name"] || ""} name='first_name' placeholder='John' className=' p-1 px-2 form-select appearance-none outline-none w-1/4 text-gray-800' type="text" />
               <br />
               <br />
@@ -55,7 +55,7 @@ export default function Form1() {
           <span>
         
             <motion.p variants={item}>
-              What matters to me right now is...
+             and what matters to me right now is my...
               
               <motion.input required variants={item} disabled onChange={handleChange} value={userData["goal_focus"] || ""} name="goal_focus" className='Goal-Focus form-select ' type='text'></motion.input>
                 

@@ -73,10 +73,10 @@ function App() {
       case 1:
         getQuestionSteps()
         steps[0] = "Introduction"
-        return <Form1/>
+        return <Form3/>
       case 2:
         steps[1] = "Welcome"
-        return <Form3/>
+        return <Form1/>
       case 3:
         steps[2] = "Age + Email"
         return <Form4/>
