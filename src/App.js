@@ -119,7 +119,8 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
+      
       <div className='main'>
         <div className='container'>
 
