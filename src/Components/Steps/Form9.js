@@ -52,7 +52,7 @@ export default function Form9() {
           <motion.div variants={container} className='select-container justify-items-stretch'>
 
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Significance/Purpose" name="stressor" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Significance & Purpose </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Personal/Finances" name="stressor" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 '> Personal/Financial Loss </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Personal/Finances" name="stressor" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 '> Personal / Financial Loss </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Divorce" name="stressor" className='user-select col-span-3 row-span-2   bg-cover focus:bg-blue-200 '> Divorce </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Time-Management" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Time Management </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Physical-Challenge" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Physical Challenges </motion.button>
