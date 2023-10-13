@@ -45,14 +45,14 @@ export default function Form5() {
           <motion.p variants={item}>
           How would you say people handle <b>THEIR</b> feelings most of the time? 
           </motion.p>
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["com_handler"] || ""} name="com_handler" className=' form-select ' type='text'></motion.input>
+          <motion.input required variants={item} disabled onChange={handleChange} value={userData["comm_handler"] || ""} name="comm_handler" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Ignore" name="com_handler" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > They ignore them </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Unaware" name="com_handler" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' >They are unaware of them </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Overwhelmed" name="com_handler" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > They are overwhelmed by them </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Control" name="com_handler" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > They are aware and can control them</motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Ignore" name="comm_handler" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > They ignore them </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Unaware" name="comm_handler" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' >They are unaware of them </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Overwhelmed" name="comm_handler" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > They are overwhelmed by them </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Control" name="comm_handler" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > They are aware and can control them</motion.button>
              
           </motion.div> 
           
