@@ -47,14 +47,14 @@ export default function Form6() {
           <motion.p variants={item}>
           When you talk to people about <b>YOUR</b> feelings, how does the conversation usually go?
           </motion.p>
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["goal_convo"] || ""} name="goal_convo" className=' form-select ' type='text'></motion.input>
+          <motion.input required variants={item} disabled onChange={handleChange} value={userData["feeling_convo"] || ""} name="feeling_convo" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Productive" name="goal_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > They end very productive. </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Unproductive" name="goal_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' >They usually end in frustration. </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Rarely" name="goal_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I rarely talk about my feelings. </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Non-Verbal" name="goal_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I don’t talk about my feelings.</motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Productive" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > They end very productive. </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Unproductive" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' >They usually end in frustration. </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Rarely" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I rarely talk about my feelings. </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Non-Verbal" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I don’t talk about my feelings.</motion.button>
              
           </motion.div> 
           

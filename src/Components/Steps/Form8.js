@@ -45,14 +45,14 @@ export default function Form8() {
           <motion.p variants={item}>
           How important is <b>YOUR</b> mental health?
           </motion.p>
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["goal_importance"] || ""} name="goal_importance" className=' form-select ' type='text'></motion.input>
+          <motion.input required variants={item} disabled onChange={handleChange} value={userData["mh_importance"] || ""} name="mh_importance" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Very-Important" name="goal_importance" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Very Important. </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Important" name="goal_importance" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' >Important. </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="IDK" name="goal_importance" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Not sure. </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Not-Important" name="goal_importance" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Not Important.</motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Very-Important" name="mh_importance" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Very Important. </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Important" name="mh_importance" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' >Important. </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="IDK" name="mh_importance" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Not sure. </motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Not-Important" name="mh_importance" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Not Important.</motion.button>
              
           </motion.div> 
           

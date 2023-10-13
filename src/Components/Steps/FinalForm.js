@@ -91,7 +91,7 @@ export default function FinalForm() {
               You are not the only one to have struggled with <motion.b variants={item}>{userData['stressor']} </motion.b>
               <br />
               <br />
-              Your actions today are playing a pivotal role in creating a better future of support and transparency for your community!
+              Your responses to this survey will play a pivotal role in guiding our commitment to bring mental health support to your school and community.
               <br />
 
             </motion.p>
@@ -99,12 +99,6 @@ export default function FinalForm() {
           
           <br />
           <motion.img className='rounded shadow-2x shadow-slate-700 ' variants={item} src={gif} alt='loading...'></motion.img>
-
-          <motion.div variants={container} className=''>
-            <br />
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Personal Goals" name="goal_focus" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Done </motion.button>
-
-          </motion.div>   
 
         </motion.div>
 
