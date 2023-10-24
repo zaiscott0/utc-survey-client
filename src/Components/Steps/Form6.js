@@ -55,6 +55,8 @@ export default function Form6() {
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Unproductive" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' >They usually end in frustration. </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Rarely" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I rarely talk about my feelings. </motion.button>
             <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Non-Verbal" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I don’t talk about my feelings.</motion.button>
+            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="IDK" name="feeling_convo" className='user-select col-start-2 col-end-6 col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I don’t know who to talk to.</motion.button>
+
              
           </motion.div> 
           

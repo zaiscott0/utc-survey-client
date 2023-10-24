@@ -55,7 +55,7 @@ export default function Form1() {
           <span>
         
             <motion.p variants={item}>
-             and the issue that matters to me the most right now are my...
+             and the issue that matters the most in my life right now is my...
              <br/>
              <br/>
               
