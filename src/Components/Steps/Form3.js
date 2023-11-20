@@ -61,7 +61,7 @@ export default function Form3() {
                     <option disabled value="">I am a:</option>
                     <option>Elementary School Student</option>
                     <option>Middle School Student</option>
-                    <option> High School Guardian</option>
+                    <option> High School Student</option>
                     <option>Parent/Guardian</option>
                     <option>Teacher</option>
                     <option>Administrator</option>
