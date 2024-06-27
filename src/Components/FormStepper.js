@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 
 
 export default function FormStepper({ steps, currStep}) {
+  
   const [newStep, setNewStep] = useState([])
   const stepRef = useRef();
   const updateStep = (stepNumber, steps) =>{
@@ -45,7 +46,10 @@ export default function FormStepper({ steps, currStep}) {
     return newSteps;
   }
   useEffect(() => {
-
+    /*if (!status){
+      return null;
+    }
+    */
     const stepState = steps.map((step, index) => 
     Object.assign({},{
       description: step,
@@ -59,7 +63,9 @@ export default function FormStepper({ steps, currStep}) {
     setNewStep(current)
 
   }, [steps, currStep]);
-
+/*
+  
+*/
   const displaySteps = newStep.map((step,index) => {
     return (
       <div key={index} className=
@@ -67,14 +73,14 @@ export default function FormStepper({ steps, currStep}) {
         index !== newStep.length - 1 ? 'w-full flex items-center' : "flex items-center"
       }>
       <div className='DisplayContainer'>
-          <div className={`formNumber ${step.selected ? "bg-blue-600 text-white  font-bold border border-blue-600" : ""}`}>
+          <div className={`formNumber ${step.selected ? "bg-pmmGrit text-white  font-bold border border-blue-600" : ""}`}>
             {/* DISPLAY FORM # */} {step.completed ? (
               <span className='text-white font-bold text-xl'>&#10003;</span>
             ):( index + 1)}
             </div>
   
           </div>
-        <div className={`formLine ${step.completed ? "border-blue-600" : "border-gray-300"}`}>{/* DISPLAY LINE */}</div>
+        <div className={`formLine ${step.completed ? "border-pmmGrit" : "border-gray-300"}`}>{/* DISPLAY LINE */}</div>
     </div>
     )
   });

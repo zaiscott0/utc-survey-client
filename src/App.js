@@ -23,6 +23,7 @@ import axios from 'axios';
 
 
 function App() {
+  //const [status, setStatus] = useState(true);
 
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [currStep, setStep] = useState(1);
@@ -106,6 +107,7 @@ function App() {
       case 12:
         return <Form12/>
       case 13:
+        //setStatus(false);
         return <FinalForm/>
       default:
     }
