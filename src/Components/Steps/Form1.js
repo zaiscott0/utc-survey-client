@@ -59,7 +59,6 @@ export default function Form1() {
              <br/>
              <br/>
               
-              <motion.input required variants={item} disabled onChange={handleChange} value={userData["goal_focus"] || ""} name="goal_focus" className='Goal-Focus form-select ' type='text'></motion.input>
                 
           
             </motion.p>

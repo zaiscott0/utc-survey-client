@@ -46,7 +46,6 @@ export default function Form9() {
         <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
           <motion.p variants={item}> Look at these statements. Click on the statement that's <b>MOST</b> important to <b>YOU</b> now.  </motion.p> <br/>
 
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["statement"] || ""} name="statement" className='Goal-Focus form-select ' type='text'></motion.input>
 
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
