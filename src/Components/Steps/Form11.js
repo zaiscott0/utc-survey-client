@@ -46,30 +46,36 @@ export default function Form11() {
     { value: "Substance-Abuse", label: "Substance Abuse" },
   ];
 
-  const btnClassName = "user-select col-span-3 row-span-2 bg-cover";
+  const btnClassName = "option-button";
 
   return (
-    <div className='form-c'>
-      <div className='form-box'>
-        <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
-          <motion.p variants={item}>
-            Look at these common challenges. Click on <b>EVERY</b> issue you’ve seen someone experience.
+    <div className="form-container">
+      <div className="form-box">
+        <motion.div
+          className="form-content"
+          animate="visible"
+          initial="hidden"
+          variants={container}
+        >
+          <motion.p variants={item} className="question-text">
+            Look at these common challenges. Click on <b>EVERY</b> issue you’ve seen someone experience. 
           </motion.p>
-          <br />
-
-          <motion.div variants={container} className='select-container justify-items-stretch'>
-            {buttonOptions.map((option, index) => (
+          <motion.div
+            variants={container}
+            className="button-container"
+          >
+            {buttonOptions.map((goal, index) => (
               <motion.button
                 key={index}
                 variants={item}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={clickChange}
-                value={option.value}
+                value={goal.value}
                 name="c_xp"
-                className={`${userData["c_xp"]?.includes(option.value) ? btnClassName + " bg-blue-200" : btnClassName + " bg-pmmGold"}`}
+                className={`${userData["c_xp"].includes(goal.value) ?  btnClassName + " bg-blue-200" : btnClassName }`}
               >
-                {option.label}
+                {goal.label}
               </motion.button>
             ))}
           </motion.div>

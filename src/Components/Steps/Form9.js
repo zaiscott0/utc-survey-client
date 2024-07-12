@@ -1,24 +1,23 @@
-import React from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { StepperContext } from '../../contexts/StepperContext';
-import {motion, AnimatePresence} from "framer-motion";
-
+import { motion } from 'framer-motion';
 
 export default function Form9() {
-  const {userData, setUserData} = useContext(StepperContext);
-  const handleChange = (e) => {
-    const {name, value}  = e.target;
-    setUserData({...userData, [name]:value});
-    //console.log(userData)
-  }
+  const { userData, setUserData } = useContext(StepperContext);
 
   const clickChange = (e) => {
-    const {name, value} = e.target;
-    //console.log(name, value)
-    setUserData({...userData,[name]:value})
-  }
+    const { name, value } = e.target;
+    const selected = userData[name] || [];
 
-  // FRAMER MOTION
+    if (selected.includes(value)) {
+      const updatedSelected = selected.filter((item) => item !== value);
+      setUserData({ ...userData, [name]: updatedSelected });
+    } else {
+      const updatedSelected = [...selected, value];
+      setUserData({ ...userData, [name]: updatedSelected });
+    }
+  };
+
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -26,47 +25,62 @@ export default function Form9() {
       scale: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  }
-    
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   const item = {
     hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1
-    }
+    visible: { y: 0, opacity: 1 },
+  };
 
-  }
+  const buttonOptions = [
+    { value: "Significance/Purpose", label: "Lack of Purpose" },
+    { value: "Personal/Finances", label: "Personal / Financial Loss" },
+    { value: "Divorce", label: "Divorce" },
+    { value: "Time-Management", label: "Lack of Time Management" },
+    { value: "Physical-Challenge", label: "Physical Challenges" },
+    { value: "Depression", label: "Depression" },
+    { value: "Anger", label: "Anger" },
+    { value: "Substance-Abuse", label: "Substance Abuse" },
+  ];
+
+  const btnClassName = "option-button";
+
   return (
-    <div className='form-c'>
-      <div className='form-box'>
-
-        <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
-          <motion.p variants={item}> Click on the issue that concerns <b>YOU PERSONALLY</b> or <b>YOU NEED TO WORK ON</b> the most today.  </motion.p> <br/>
-
-
-
-          <motion.div variants={container} className='select-container justify-items-stretch'>
-
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Significance/Purpose" name="stressor" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Lack of Purpose </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Personal/Finances" name="stressor" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 '> Personal / Financial Loss </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Divorce" name="stressor" className='user-select col-span-3 row-span-2   bg-cover focus:bg-blue-200 '> Divorce </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Time-Management" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Lack of Time Management </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Physical-Challenge" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Physical Challenges </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Depression" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Depression </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Anger" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Anger </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Substance-Abuse" name="stressor" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Substance Abuse </motion.button>
-
-          </motion.div>   
-          
+    <div className="form-container">
+      <div className="form-box">
+        <motion.div
+          className="form-content"
+          animate="visible"
+          initial="hidden"
+          variants={container}
+        >
+          <motion.p variants={item} className="question-text">
+            Click on the issue that concerns you the most. 
+          </motion.p>
+          <motion.div
+            variants={container}
+            className="button-container"
+          >
+            {buttonOptions.map((goal, index) => (
+              <motion.button
+                key={index}
+                variants={item}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={clickChange}
+                value={goal.value}
+                name="stressor"
+                className="option-button"
+              >
+                {goal.label}
+              </motion.button>
+            ))}
+          </motion.div>
         </motion.div>
-
-        
-
       </div>
-
     </div>
-  )
+  );
 }
