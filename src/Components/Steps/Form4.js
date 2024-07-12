@@ -43,8 +43,8 @@ export default function Form4() {
           animate="visible"
           className="form-content"
         >
-          <motion.p variants={item}>
-            When you look in your <b>COMMUNITY</b>, how do you think most people feel that are around you?...🤔
+          <motion.p className='question-text' variants={item}>
+            When You Look In Your <b>COMMUNITY</b>, How Do You Think Most People Feel Around You?...🤔
           </motion.p>
 
           <motion.div variants={container} className="button-container">

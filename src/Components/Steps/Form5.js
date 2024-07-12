@@ -42,8 +42,8 @@ export default function Form5() {
           initial="hidden"
           className="form-content"
         >
-          <motion.p variants={item}>
-            How do you handle <b>YOUR</b> feelings most of the time?
+          <motion.p className='question-text' variants={item}>
+            How Do You Handle <b>YOUR</b> Feelings Most Of The Time?
           </motion.p>
 
           <motion.div variants={container} className="button-container">

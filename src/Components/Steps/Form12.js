@@ -40,10 +40,10 @@ export default function Form9() {
     { value: "Fires", label: "I need help with the fires in my life." },
     { value: "Control", label: "I need to take control of my story." },
     { value: "Focus", label: "I need to focus on my goals." },
-    { value: "Help-Me", label: "I want people to help me. " },
-    { value: "Action-Plan", label: "I need an action plan." },
-    { value: "Adjusting", label: "I struggle with adjusting my plans." },
-    { value: "Help-Others", label: "I want to learn to help others." },
+    { value: "Help-Me", label: "I want help. " },
+    { value: "Action-Plan", label: "I need a plan." },
+    { value: "Adjusting", label: "I struggle with adjusting." },
+    { value: "Help-Others", label: "I want to help others." },
   ];
 
   const btnClassName = "option-button";
@@ -58,7 +58,7 @@ export default function Form9() {
           variants={container}
         >
           <motion.p variants={item} className="question-text">
-          Look at these statements. Click on the statement that's <b>MOST</b> important to <b>YOU</b> now. 
+          Click On The Statement That's <b>MOST</b> Important To <b>YOU</b> Now. 
           </motion.p>
           <motion.div
             variants={container}

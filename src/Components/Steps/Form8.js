@@ -42,8 +42,8 @@ export default function Form8() {
           initial="hidden"
           className="form-content"
         >
-          <motion.p variants={item}>
-            How important is <b>YOUR</b> mental health?
+          <motion.p className='question-text' variants={item}>
+            How Important Is <b>YOUR</b> Mental Health?
           </motion.p>
 
           <motion.div variants={container} className="button-container">

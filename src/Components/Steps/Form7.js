@@ -42,8 +42,8 @@ export default function Form4() {
           initial="hidden"
           className="form-content"
         >
-          <motion.p variants={item}>
-            How do you feel about <b>YOUR</b> mental health at this time?
+          <motion.p className='question-text' variants={item}>
+            How Do You Feel About <b>YOUR</b> Mental Health At This Time?
           </motion.p>
 
           <motion.div variants={container} className="button-container">

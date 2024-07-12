@@ -58,7 +58,7 @@ export default function Form11() {
           variants={container}
         >
           <motion.p variants={item} className="question-text">
-            Look at these common challenges. Click on <b>EVERY</b> issue you’ve seen someone experience. 
+            Click On <b>EVERY</b> Issue You’ve Seen Someone Experience. 
           </motion.p>
           <motion.div
             variants={container}

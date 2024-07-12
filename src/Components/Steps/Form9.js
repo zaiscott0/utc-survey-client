@@ -58,7 +58,7 @@ export default function Form9() {
           variants={container}
         >
           <motion.p variants={item} className="question-text">
-            Click on the issue that concerns you the most. 
+            Click On The Issue That Concerns You The Most. 
           </motion.p>
           <motion.div
             variants={container}
