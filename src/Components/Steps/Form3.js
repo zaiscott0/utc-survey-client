@@ -34,6 +34,23 @@ const ResponsiveForm = () => {
         style={{ maxWidth: '80%' }}
       >
         <h2 className="text-2xl font-semibold mb-4">How old are you?</h2>
+
+        <div className="mb-4 ">
+          <label htmlFor="age" className="block text-gray-700 font-medium mb-1">
+            Name:
+          </label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            value={userData.first_name || ''}
+            onChange={handleChange}
+            className="w-full px-3 py-2 rounded-md border-2 border-pmmBlue focus:outline-none "
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
         <div className="mb-4 ">
           <label htmlFor="age" className="block text-gray-700 font-medium mb-1">
             Age:
@@ -49,6 +66,7 @@ const ResponsiveForm = () => {
             required
           />
         </div>
+        
         <div className="mb-4">
           <label htmlFor="ageGroup" className="block text-gray-700 font-medium mb-1">
             Age Group:

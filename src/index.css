@@ -26,7 +26,16 @@ body{
 }
 
 .container{
-  /*@apply w-full h-full;*/
+  @apply w-full h-full;
+}
+
+.fixed-button {
+  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 p-4  z-50;
+  min-width: 150px; /* Minimum width to ensure content is not cut off */
+  padding: 10px 20px; /* Adequate padding for button content */
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  max-width: 500px; /* Optional: limit the maximum width */
 }
 
 .FormContainer{
@@ -74,7 +83,7 @@ body{
 }
 
 .btn{
-  @apply w-[50%] font-semibold py-0 px-0 rounded-xl bg-pmmBlue text-white uppercase cursor-pointer border-2 border-slate-300;
+  @apply w-full font-semibold py-0 px-0 rounded-xl bg-pmmBlue text-white uppercase cursor-pointer border-2 border-slate-300;
 }
 
 .btn-back{
@@ -93,7 +102,7 @@ body{
 */
 
 .select-container{
-  @apply  w-full h-full m-4 grid grid-cols-6 grid-rows-4 gap-4 ;
+  @apply  w-2/3 h-full m-4 grid grid-cols-6 grid-rows-4 gap-x-10 gap-y-8 ;
 }
 
 .user-select{
