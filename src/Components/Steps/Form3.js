@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { StepperContext } from '../../contexts/StepperContext';
+import { motion } from 'framer-motion';
 
 const ageGroups = [
   'Elementary School Student',
@@ -20,23 +21,43 @@ const ResponsiveForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here if needed
     console.log(userData);
-    // Optionally reset userData after submission
-    // setUserData({ name: '', age: '', ageGroup: '' });
+  };
+
+  // Framer Motion animations
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
   };
 
   return (
-    <div className="flex justify-center items-center">
-      <form
+    <div className="form-container">
+      <motion.form
         onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-lg "
+        className="form-box"
         style={{ maxWidth: '80%' }}
+        variants={container}
+        animate="visible"
+        initial="hidden"
       >
-        <h2 className="text-2xl font-semibold mb-4">How old are you?</h2>
+        <motion.h2 variants={item} className="form-title">
+          How old are you?
+        </motion.h2>
 
-        <div className="mb-4 ">
-          <label htmlFor="age" className="block text-gray-700 font-medium mb-1">
+        <motion.div variants={item} className="form-group">
+          <label htmlFor="first_name" className="form-label">
             Name:
           </label>
           <input
@@ -45,14 +66,14 @@ const ResponsiveForm = () => {
             name="first_name"
             value={userData.first_name || ''}
             onChange={handleChange}
-            className="w-full px-3 py-2 rounded-md border-2 border-pmmBlue focus:outline-none "
+            className="form-input"
             placeholder="Enter your name"
             required
           />
-        </div>
+        </motion.div>
 
-        <div className="mb-4 ">
-          <label htmlFor="age" className="block text-gray-700 font-medium mb-1">
+        <motion.div variants={item} className="form-group">
+          <label htmlFor="age" className="form-label">
             Age:
           </label>
           <input
@@ -61,14 +82,14 @@ const ResponsiveForm = () => {
             name="age"
             value={userData.age || ''}
             onChange={handleChange}
-            className="w-full px-3 py-2 rounded-md border-2 border-pmmBlue focus:outline-none "
+            className="form-input"
             placeholder="Enter your age"
             required
           />
-        </div>
-        
-        <div className="mb-4">
-          <label htmlFor="ageGroup" className="block text-gray-700 font-medium mb-1">
+        </motion.div>
+
+        <motion.div variants={item} className="form-group">
+          <label htmlFor="ageGroup" className="form-label">
             Age Group:
           </label>
           <select
@@ -76,7 +97,7 @@ const ResponsiveForm = () => {
             name="ageGroup"
             value={userData.ageGroup || ''}
             onChange={handleChange}
-            className="w-full px-3 py-2 rounded-md border-2 border-pmmBlue focus:outline-none"
+            className="form-input"
             required
           >
             <option value="" disabled hidden>
@@ -88,8 +109,8 @@ const ResponsiveForm = () => {
               </option>
             ))}
           </select>
-        </div>
-      </form>
+        </motion.div>
+      </motion.form>
     </div>
   );
 };

@@ -1,23 +1,21 @@
-import React from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { StepperContext } from '../../contexts/StepperContext';
-import {motion, AnimatePresence} from "framer-motion";
-
+import { motion } from 'framer-motion';
 
 export default function Form6() {
-  const {userData, setUserData} = useContext(StepperContext);
+  const { userData, setUserData } = useContext(StepperContext);
+
   const handleChange = (e) => {
-    const {name, value}  = e.target;
-    setUserData({...userData, [name]:value});
-  }
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
+  };
 
   const clickChange = (e) => {
-    const {name, value} = e.target;
-    //console.log(name, value)
-    setUserData({...userData,[name]:value})
-  }
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
+  };
 
-  // FRAMER MOTION
+  // Framer Motion animations
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -25,46 +23,52 @@ export default function Form6() {
       scale: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  }
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
   const item = {
     hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1
-    }
-
-  }
+    visible: { y: 0, opacity: 1 },
+  };
 
   return (
-    <div className='form-c'>
-      <div className='form-box'>
-        <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
-
+    <div className="form-container">
+      <div className="form-box">
+        <motion.div
+          variants={container}
+          animate="visible"
+          initial="hidden"
+          className="form-content"
+        >
           <motion.p variants={item}>
-          When you talk to people about <b>YOUR</b> feelings, how does the conversation usually go?
+            When you talk to people about <b>YOUR</b> feelings, how does the conversation usually go?
           </motion.p>
 
-          <motion.div variants={container} className='select-container justify-items-stretch'>
-
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Productive" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > They end very productive. </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Unproductive" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' >They usually end in frustration. </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Rarely" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I rarely talk about my feelings. </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Non-Verbal" name="feeling_convo" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I don’t talk about my feelings.</motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="IDK" name="feeling_convo" className='user-select col-start-2 col-end-6 col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > I don’t know who to talk to.</motion.button>
-
-             
-          </motion.div> 
-          
+          <motion.div variants={container} className="button-container">
+            {[
+              { value: 'Productive', label: 'They end very productive.' },
+              { value: 'Unproductive', label: 'They usually end in frustration.' },
+              { value: 'Rarely', label: 'I rarely talk about my feelings.' },
+              { value: 'Non-Verbal', label: 'I don’t talk about my feelings.' },
+            ].map((option, index) => (
+              <motion.button
+                key={index}
+                variants={item}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={clickChange}
+                value={option.value}
+                name="feeling_convo"
+                className="feeling-button"
+              >
+                {option.label}
+              </motion.button>
+            ))}
+          </motion.div>
         </motion.div>
-
-        
-
       </div>
-
     </div>
-  )
+  );
 }
