@@ -285,7 +285,8 @@ body{
 
 .feeling-button:focus {
   outline: none;
-  background-color: #555;
+  /*background-color: #555;*/
+  @apply bg-pmmGrit;
 }
 
 .importance-button {
@@ -306,7 +307,8 @@ body{
 
 .importance-button:focus {
   outline: none;
-  background-color: #555;
+  /*background-color: #555;*/
+  @apply bg-pmmGrit;
 }
 
 .select-container {
@@ -340,9 +342,7 @@ body{
   background-color: #bfdbfe;
 }
 
-.bg-pmmGold {
-  background-color: #ffd700;
-}
+
 
 .form-c {
   display: flex;

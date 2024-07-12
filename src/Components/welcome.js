@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const WelcomeMessage = ({ onAnimationComplete }) => {
   const [message, setMessage] = useState('');
-  const welcomeText = "Hello there!";
+  const welcomeText = "Hello There!";
 
   useEffect(() => {
     let index = 0;
