@@ -36,7 +36,7 @@ export default function Form9() {
   };
 
   const buttonOptions = [
-    { value: "Thoughts/Feelings", label: "I need help with my thoughts and feelings." },
+    { value: "Thoughts/Feelings", label: "I need help with my thoughts." },
     { value: "Fires", label: "I need help with the fires in my life." },
     { value: "Control", label: "I need to take control of my story." },
     { value: "Focus", label: "I need to focus on my goals." },
@@ -58,7 +58,7 @@ export default function Form9() {
           variants={container}
         >
           <motion.p variants={item} className="question-text">
-          Click On The Statement That's <b>MOST</b> Important To <b>YOU</b> Now. 
+          Which Statement is <b>MOST</b> Important To <b>YOU</b> Now. 
           </motion.p>
           <motion.div
             variants={container}
