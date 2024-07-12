@@ -53,7 +53,7 @@ const ResponsiveForm = () => {
         initial="hidden"
       >
         <motion.h2 variants={item} className="form-title">
-          How old are you?
+          Tell Us More About You!
         </motion.h2>
 
         <motion.div variants={item} className="form-group">
