@@ -101,7 +101,7 @@ const ResponsiveForm = () => {
             required
           >
             <option value="" disabled hidden>
-              Select your age group
+              Tap to select your age group
             </option>
             {ageGroups.map((group, index) => (
               <option key={index} value={group}>
