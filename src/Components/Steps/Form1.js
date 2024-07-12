@@ -1,23 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { StepperContext } from '../../contexts/StepperContext';
-import {motion, AnimatePresence} from "framer-motion";
+import { motion } from 'framer-motion';
 
 export default function Form1() {
-  const {userData, setUserData} = useContext(StepperContext);
+  const { userData, setUserData } = useContext(StepperContext);
+
   const handleChange = (e) => {
-    const {name, value}  = e.target;
-    setUserData({...userData, [name]:value});
-    //console.log(userData);
-  }
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
+  };
 
   const clickChange = (e) => {
-    const {name, value} = e.target;
-    //console.log(name, value)
-    setUserData({...userData,[name]:value})
-  }
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
+  };
 
-  // FRAMER MOTION
+  // Framer Motion animations
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -25,52 +23,49 @@ export default function Form1() {
       scale: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  }
-    
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   const item = {
     hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1
-    }
-
-  }
+    visible: { y: 0, opacity: 1 },
+  };
 
   return (
-    <div className='form-c'>
-      <div className='form-box'>
-        <motion.div className='form-input' animate="visible" initial="hidden" variants={container}>
-
-          <span>
-        
-            <motion.p variants={item}>
+    <div className="form-container">
+      <div className="form-box">
+        <motion.div
+          className="form-content"
+          animate="visible"
+          initial="hidden"
+          variants={container}
+        >
+          <motion.p variants={item} className="question-text">
             The issue that matters the most in my life right now is my...
-             <br/>
-             <br/>
-            </motion.p>
-            
-          </span>
-          <br />
-          <motion.div variants={container} className='select-container justify-items-stretch'>
-
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Personal Goals" name="goal_focus" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 ' > Personal Goals </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Relationship Goals" name="goal_focus" className='user-select col-span-3 row-span-2  bg-cover focus:bg-blue-200 '> Relationships </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Academic Goals" name="goal_focus" className='user-select col-span-3 row-span-2   bg-cover focus:bg-blue-200 '> Academic Goals </motion.button>
-            <motion.button variants={item} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Athletic Goals" name="goal_focus" className={` user-select col-span-3 row-span-2 focus:bg-blue-200 `}> Athletic Goals </motion.button>
-            <motion.button whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={clickChange} value="Career Goals" name="goal_focus" className={` col-start-2 user-select col-span-4 row-span-2 focus:bg-blue-200 `}> Career Goals </motion.button>
-
-
-          </motion.div>   
-
+          </motion.p>
+          <motion.div
+            variants={container}
+            className="button-container"
+          >
+            {['Personal Goals', 'Relationship Goals', 'Academic Goals', 'Athletic Goals', 'Career Goals'].map((goal, index) => (
+              <motion.button
+                key={index}
+                variants={item}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={clickChange}
+                value={goal}
+                name="goal_focus"
+                className="option-button"
+              >
+                {goal}
+              </motion.button>
+            ))}
+          </motion.div>
         </motion.div>
-
-        
-
       </div>
-
     </div>
-  )
+  );
 }
