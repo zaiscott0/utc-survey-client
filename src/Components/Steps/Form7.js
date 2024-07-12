@@ -47,7 +47,6 @@ export default function Form4() {
           <motion.p variants={item}>
           How do you feel about <b>YOUR</b> mental health at this time?
           </motion.p>
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["current_feeling"] || ""} name="current_feeling" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 

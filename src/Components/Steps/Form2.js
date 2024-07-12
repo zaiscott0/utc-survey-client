@@ -45,7 +45,6 @@ export default function Form5() {
           <motion.p variants={item}>
           How would you say people handle <b>THEIR</b> feelings most of the time? 
           </motion.p>
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["comm_handler"] || ""} name="comm_handler" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 

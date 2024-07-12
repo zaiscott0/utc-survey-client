@@ -46,7 +46,6 @@ export default function Form9() {
         <motion.div variants={container} animate="visible" initial="hidden" className='form-input'>
           <motion.p variants={item}> Click on the issue that concerns <b>YOU PERSONALLY</b> or <b>YOU NEED TO WORK ON</b> the most today.  </motion.p> <br/>
 
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["stressor"] || ""} name="stressor" className='Goal-Focus form-select ' type='text'></motion.input>
 
 
           <motion.div variants={container} className='select-container justify-items-stretch'>

@@ -47,7 +47,6 @@ export default function Form6() {
           <motion.p variants={item}>
           When you talk to people about <b>YOUR</b> feelings, how does the conversation usually go?
           </motion.p>
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["feeling_convo"] || ""} name="feeling_convo" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 

@@ -45,7 +45,6 @@ export default function Form8() {
           <motion.p variants={item}>
           How important is <b>YOUR</b> mental health?
           </motion.p>
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["mh_importance"] || ""} name="mh_importance" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 

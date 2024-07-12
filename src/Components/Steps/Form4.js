@@ -47,7 +47,6 @@ export default function Form4() {
           <motion.p variants={item}>
           When you look in your <b>COMMUNITY</b>, how do you think most people feel that are around you?...🤔
           </motion.p>
-          <motion.input required variants={item} disabled onChange={handleChange} value={userData["comm_feeling"] || ""} name="comm_feeling" className=' form-select ' type='text'></motion.input>
 
           <motion.div variants={container} className='select-container justify-items-stretch'>
 

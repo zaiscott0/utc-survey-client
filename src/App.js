@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import {motion} from "framer-motion";
-import {StepperContext} from "./contexts/StepperContext";
+import { motion, AnimatePresence } from 'framer-motion';
+import { StepperContext } from './contexts/StepperContext';
 import FormStepper from './Components/FormStepper';
 import Navbar from './Components/Navbar';
 import StepperControl from './Components/StepperControl';
@@ -20,44 +20,43 @@ import Form11 from './Components/Steps/Form11';
 import Form12 from './Components/Steps/Form12';
 
 import axios from 'axios';
-
+import WelcomeMessage from './Components/welcome'; // Import the WelcomeMessage component
 
 function App() {
-  //const [status, setStatus] = useState(true);
-
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [currStep, setStep] = useState(1);
   const [userData, setUserData] = useState({
-    "xp":[],
-    "c_xp": []
+    xp: [],
+    c_xp: [],
   });
   const [finalData, setFinalData] = useState([]);
-  //console.log(currStep);
+  const [showWelcome, setShowWelcome] = useState(true); // State to control the welcome message visibility
+  const [animationComplete, setAnimationComplete] = useState(false); // State to track animation completion
+
   const steps = [
     "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
+    "Welcome",
+    "Age + Email",
+    "Future Feelings",
+    "Goal Management",
+    "Goal Convos",
+    "Customized Plan",
+    "Importance",
+    "Stressor",
+    "Experience",
+    "Final Thoughts",
+    "Thank You",
     ""
-
   ];
 
-  // lets make a axios endpoint for updating data
   const api = axios.create({
-    baseURL: `https://utc-survey-api.onrender.com/api`
+    baseURL: `https://utc-survey-api.onrender.com/api`,
   });
-  async function getQuestionSteps () {
+
+  async function getQuestionSteps() {
     let res = await api.get("/data");
     console.log("HERE IS THE RESPONSE...");
-    console.log(res.data)
+    console.log(res.data);
     return res.data.total_questions;
   }
 
@@ -67,89 +66,96 @@ function App() {
       setTotalQuestions(get_total_q);
     };
     test();
-  },[]);
+  }, []);
 
   const displayStep = (step) => {
-    switch(step){
+    switch (step) {
       case 1:
-        getQuestionSteps()
-        steps[0] = "Introduction"
-        return <Form3/>
+        getQuestionSteps();
+        return <Form3 />;
       case 2:
-        steps[1] = "Welcome"
-        return <Form1/>
+        return <Form1 />;
       case 3:
-        steps[2] = "Age + Email"
-        return <Form4/>
+        return <Form4 />;
       case 4:
-        steps[3] = "Future Feelings"
-        return <Form2/>
+        return <Form2 />;
       case 5:
-        steps[4] = "Goal Management"
-        return <Form5/>
+        return <Form5 />;
       case 6:
-        steps[5] = "Goal Convos"
-        return <Form6/>
+        return <Form6 />;
       case 7:
-        steps[6] = "Customized Plan"
-        return <Form7/>
+        return <Form7 />;
       case 8:
-        steps[7] = "Importance"
-        return <Form8/>
+        return <Form8 />;
       case 9:
-        steps[9] = "Experience"
-        return <Form11/>
+        return <Form11 />;
       case 10:
-        steps[8] = "Stressor"
-        return <Form10/>
+        return <Form10 />;
       case 11:
-        return <Form9/>
+        return <Form9 />;
       case 12:
-        return <Form12/>
+        return <Form12 />;
       case 13:
-        //setStatus(false);
-        return <FinalForm/>
+        return <FinalForm />;
       default:
+        return null;
     }
-  }
+  };
 
-  const handleClick = (direction) =>{
+  const handleClick = (direction) => {
     let newStep = currStep;
     direction === "next" ? newStep++ : newStep--;
     newStep > 0 && newStep <= steps.length && setStep(newStep);
-  }
+  };
+
+  const handleAnimationComplete = () => {
+    setShowWelcome(false); // Hide the welcome message
+    setAnimationComplete(true); // Mark animation as complete
+  };
 
   return (
     <div className="App">
-      {/* <Navbar></Navbar> */}
-      
-      <div className='main'>
-        <div className='container'>
+      <AnimatePresence>
+        {showWelcome && (
+          <WelcomeMessage onAnimationComplete={handleAnimationComplete} />
+        )}
+      </AnimatePresence>
 
-          {/* STEPPER */}
-          <FormStepper steps={steps} currStep={currStep}/>
+      <AnimatePresence>
+        {!showWelcome && animationComplete && (
+          <motion.div
+            className="main"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="container">
+              {/* STEPPER */}
+              <FormStepper steps={steps} currStep={currStep} />
 
+              {/* DISPLAY FORMS */}
+              <div className="my-1 p-4">
+                <StepperContext.Provider
+                  value={{ userData, setUserData, finalData, setFinalData }}
+                >
+                  {displayStep(currStep)}
+                </StepperContext.Provider>
+              </div>
 
-          {/* DISPLAY FORMS */}
-          <div className=' my-1 p-4'>
-            <StepperContext.Provider value={{userData,setUserData,finalData,setFinalData}}> 
-              {displayStep(currStep)} 
-            </StepperContext.Provider>
-          </div>
-
-
-          
-          {/* Navigation Control */}
-          {currStep !== steps.length && 
-          <StepperControl handleClick={handleClick} currentStep={currStep} steps={steps} />
-          }
-        </div>
-      </div>
-      
-      
+              {/* Navigation Control */}
+              {currStep !== steps.length && (
+                <StepperControl
+                  handleClick={handleClick}
+                  currentStep={currStep}
+                  steps={steps}
+                />
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
 
 export default App;
-

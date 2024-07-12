@@ -43,28 +43,14 @@ export default function Form1() {
     <div className='form-c'>
       <div className='form-box'>
         <motion.div className='form-input' animate="visible" initial="hidden" variants={container}>
-          
-          <span>
-            <motion.p variants={item}>
-              My name is... 
-              <motion.input required variants={item} onChange={handleChange} value={userData["first_name"] || ""} name='first_name' placeholder='John' className=' p-1 px-2 form-select appearance-none outline-none w-1/4 text-gray-800' type="text" />
-              <br />
-              <br />
-            </motion.p>
-          </span>
+
           <span>
         
             <motion.p variants={item}>
-             and the issue that matters the most in my life right now is my...
+            The issue that matters the most in my life right now is my...
              <br/>
              <br/>
-              
-              <motion.input required variants={item} disabled onChange={handleChange} value={userData["goal_focus"] || ""} name="goal_focus" className='Goal-Focus form-select ' type='text'></motion.input>
-                
-          
             </motion.p>
-
-            
             
           </span>
           <br />
