@@ -129,12 +129,12 @@ function App() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="container">
+            <div className="container main-content">
               {/* STEPPER */}
               <FormStepper steps={steps} currStep={currStep} />
 
               {/* DISPLAY FORMS */}
-              <div className="my-1 p-4">
+              <div className="my-1 p-4 display-content">
                 <StepperContext.Provider
                   value={{ userData, setUserData, finalData, setFinalData }}
                 >
