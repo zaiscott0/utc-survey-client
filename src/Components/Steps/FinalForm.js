@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useContext, useState, useEffect } from 'react';
 import { StepperContext } from '../../contexts/StepperContext';
 import axios from 'axios';
-import Modal from './finalreccModal';
+//import Modal from './finalreccModal';
 
 const RecommendationPage = ({ recommendations, userName }) => {
 
