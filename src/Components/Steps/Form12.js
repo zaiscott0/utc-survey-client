@@ -7,15 +7,7 @@ export default function Form9() {
 
   const clickChange = (e) => {
     const { name, value } = e.target;
-    const selected = userData[name] || [];
-
-    if (selected.includes(value)) {
-      const updatedSelected = selected.filter((item) => item !== value);
-      setUserData({ ...userData, [name]: updatedSelected });
-    } else {
-      const updatedSelected = [...selected, value];
-      setUserData({ ...userData, [name]: updatedSelected });
-    }
+    setUserData({ ...userData, [name]: value });
   };
 
   const container = {
