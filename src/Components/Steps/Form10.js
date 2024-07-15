@@ -58,7 +58,7 @@ export default function Form10() {
           variants={container}
         >
           <motion.p variants={item} className="question-text">
-            Click On <b>EVERY</b> Issue <b>YOU'VE</b> Experienced. 
+            Click On <b className='text-pmmGrit'>EVERY</b> Issue <b className='text-pmmGrit'>YOU'VE</b> Experienced. 
           </motion.p>
           <motion.div
             variants={container}

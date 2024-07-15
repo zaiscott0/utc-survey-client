@@ -43,7 +43,7 @@ export default function Form6() {
           className="form-content"
         >
           <motion.p className='question-text' variants={item}>
-            When You Talk To People About <b>YOUR</b> Feelings, How Does The Conversation Usually Go?
+            When You Talk To People About <b className='text-pmmGrit'>YOUR</b> Feelings, How Does The Conversation Usually Go?
           </motion.p>
 
           <motion.div variants={container} className="button-container">

@@ -50,7 +50,7 @@ export default function Form9() {
           variants={container}
         >
           <motion.p variants={item} className="question-text">
-          Which Statement is <b>MOST</b> Important To <b>YOU</b> Now. 
+          Which Statement is <b className='text-pmmGrit'>MOST</b> Important To <b className='text-pmmGrit'>YOU</b> Now. 
           </motion.p>
           <motion.div
             variants={container}

@@ -58,7 +58,7 @@ export default function Form11() {
           variants={container}
         >
           <motion.p variants={item} className="question-text">
-            Click On <b>EVERY</b> Issue You’ve Seen Someone Experience. 
+            Click On <b className='text-pmmGrit'>EVERY</b> Issue You’ve Seen Someone Experience. 
           </motion.p>
           <motion.div
             variants={container}

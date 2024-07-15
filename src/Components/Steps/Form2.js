@@ -44,7 +44,7 @@ export default function Form5() {
           className="form-content"
         >
           <motion.p variants={item} className="question-text">
-            How Would You Say People Handle <b>THEIR</b> Feelings?
+            How Would You Say People Handle <b className='text-pmmGrit'>THEIR</b> Feelings?
           </motion.p>
           <motion.div variants={container} className="button-container">
             {['They ignore them', 'They are unaware of them', 'They are overwhelmed by them', 'They are aware and control them'].map((option, index) => (
