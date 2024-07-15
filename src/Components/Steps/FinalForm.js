@@ -221,8 +221,8 @@ export default function FinalForm() {
       <div className='form-c'>
       <div className='form-box'>
         <motion.div className='form-input' animate="visible" initial="hidden" variants={container}>
-          <span className="font-black text-3xl mb-10">
-            <motion.p variants={item} className="flex items-center">
+          <span className="font-black text-2xl mb-5">
+            <motion.p variants={item} className="flex items-center mb-2 mt-3">
               Welcome to LiveProsperous<motion.b variants={item} className="ml-1">{userData['first_name']}</motion.b>
             </motion.p>
           </span>
@@ -237,11 +237,11 @@ export default function FinalForm() {
          
           <span className="text-black-400 font-light max-w-[800px] mx-auto">
             <motion.p variants={item} className="mb-4 text-1xl">
-              My name is Freddie Scott, former pro athelete, certified Transition Coach, and one of many people you will learn from in our community who are advocates for your success. Based on your responses I recommend you start with our    
+              I'm Freddie Scott, former pro athelete, Transition Coach, and advocate for your success in our community. Based on your responses I want you to start with our    
               <motion.b variants={item} className=" font-black pl-1">
               {
                 statement2pillar[userData['statement']]
-              } </motion.b>course. Before you start, take a minute to reflect on the points below. They will help you get the most from this lessons. 😉
+              } </motion.b>course. Before you dive in, reflect on the points below to get the most out of this course.
 
               <br/>
 
@@ -263,16 +263,16 @@ export default function FinalForm() {
             </motion.div>
           </span>
 
-          <span class="leading-10 font-black text-3xl mb-5 mt-4">Ready to: <motion.b variants={item} className="text-pmmRed font-black text-3xl">
+          <span class="leading-10 font-black text-2xl mb-3 mt-4">Ready to: <motion.b variants={item} className="recommend-course font-black text-1xl">
               {
                 statement2pillar[userData['statement']]
               }?</motion.b>
           </span>
-
-          <button onClick={LinkHandler} className=" text-2xl bg-pmmEvry1 hover:bg-pmmGold text-white font-black py-4 px-6 rounded inline-flex items-center">Take the Course</button>
+          
+          <button onClick={LinkHandler} className=" text-1xl bg-pmmEvry1 hover:bg-pmmGold text-white font-black py-3 px-5 rounded inline-flex items-center mb-8">Take the Course</button>
         </motion.div>
         
-
+            
       </div>
 
     </div>
