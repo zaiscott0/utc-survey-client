@@ -22,6 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-src/Components/Steps/finalreccModal.js
 src/Components/Steps/testfile.js
 src/Components/Steps/testfile2.js
