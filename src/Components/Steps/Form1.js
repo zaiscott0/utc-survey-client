@@ -43,7 +43,7 @@ export default function Form1() {
           variants={container}
         >
           <motion.p variants={item} className="question-text">
-            The Issue That Matters The Most In My Life Right Now Is My...
+            The Issue That Matters The <b className='text-pmmGrit'>MOST</b> In My Life Right Now Is My...
           </motion.p>
           <motion.div
             variants={container}

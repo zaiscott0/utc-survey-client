@@ -96,7 +96,7 @@ const RecommendationPage = ({ recommendations, userName }) => {
   
 
   return (
-    <div className="flex flex-col h-full bg-white text-white justify-between">
+    <div className="flex flex-col h-full bg-white text-white justify-between overflow-auto">
       <div className="flex flex-col items-center justify-center flex-grow">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

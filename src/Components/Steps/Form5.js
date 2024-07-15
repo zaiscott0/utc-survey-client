@@ -43,7 +43,7 @@ export default function Form5() {
           className="form-content"
         >
           <motion.p className='question-text' variants={item}>
-            How Do You Handle <b>YOUR</b> Feelings Most Of The Time?
+            How Do You Handle <b className='text-pmmGrit'>YOUR</b> Feelings Most Of The Time?
           </motion.p>
 
           <motion.div variants={container} className="button-container">

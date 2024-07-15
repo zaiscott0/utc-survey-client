@@ -44,7 +44,7 @@ export default function Form4() {
           className="form-content"
         >
           <motion.p className='question-text' variants={item}>
-            When You Look In Your <b>COMMUNITY</b>, How Do You Think Most People Feel Around You?...🤔
+            When You Look In Your <b className='text-pmmGrit'>COMMUNITY</b>, How Do You Think Most People Feel Around You?...🤔
           </motion.p>
 
           <motion.div variants={container} className="button-container">

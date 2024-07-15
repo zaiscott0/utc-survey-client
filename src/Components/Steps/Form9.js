@@ -50,7 +50,7 @@ export default function Form9() {
           variants={container}
         >
           <motion.p variants={item} className="question-text">
-            Click On The Issue That Concerns <b>YOU</b> Concerns You The <b>MOST</b>. 
+            Click On The Issue That Concerns <b className='text-pmmGrit'>YOU</b> The <b className='text-pmmGrit'>MOST</b>. 
           </motion.p>
           <motion.div
             variants={container}
