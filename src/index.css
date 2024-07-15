@@ -101,6 +101,7 @@ html, body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   position: relative;
   overflow: hidden;
+  width: 75%;
   margin-bottom: 20px; /* Adjust this value to control the distance from the bottom */
 }
 
@@ -209,7 +210,8 @@ html, body {
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-top:40px;
   height: 100%;
   /*background-color: #000;*/
   color: #000;
@@ -242,6 +244,10 @@ html, body {
   margin-bottom: 20px;
   text-align: center;
   font-weight: bolder;
+}
+
+.recommend-course {
+  color: #f7cc55;
 }
 
 /* Adjust font size for screens smaller than 768px */
@@ -474,7 +480,7 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #ffff;
   color: #333;
 }
 
