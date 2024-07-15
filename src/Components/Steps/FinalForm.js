@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useContext, useState, useEffect } from 'react';
 import { StepperContext } from '../../contexts/StepperContext';
 import axios from 'axios';
-//import Modal from './finalreccModal';
+import Modal from './finalreccModal';
 
 const RecommendationPage = ({ recommendations, userName }) => {
 
@@ -69,6 +69,30 @@ const RecommendationPage = ({ recommendations, userName }) => {
 
   const pmmCourse = statement2pillar[userData.statement];
 
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const links = {
+    "Thoughts/Feelings": "https://learn.pivotalmomentsmedia.com/courses/bepresent",
+    "Fires": "https://learn.pivotalmomentsmedia.com/courses/beafirefighter",
+    "Control": "https://learn.pivotalmomentsmedia.com/courses/beanauthor",
+    "Action-Plan":" https://learn.pivotalmomentsmedia.com/courses/beapilot",
+    "Help-Me": "https://learn.pivotalmomentsmedia.com/courses/beamanager",
+    "Focus": "https://learn.pivotalmomentsmedia.com/courses/beintentional",
+    "Adjusting": "https://learn.pivotalmomentsmedia.com/courses/beagile",
+    "Help-Others": "https://learn.pivotalmomentsmedia.com/courses/bealifeguard"
+  }
+
+  const openNewTab = (url) => {
+    window.open(url, '_blank');
+  };
   
 
   return (
@@ -117,22 +141,27 @@ const RecommendationPage = ({ recommendations, userName }) => {
             ))}
           </ul>
           <div className="flex flex-col gap-4">
-            <label className="bg-black text-white rounded-full py-2 px-5 text-lg flex justify-between items-center border border-yellow-500">
-            Ready to achieve your goals?
-              <input type="checkbox" className="ml-2 transform scale-125" />
-            </label>
-            <div className="bg-black text-white rounded-lg py-2 px-5 text-lg border border-yellow-500 flex justify-between items-center">
-              <span>7 Day Free Trial</span>
-              <span className="text-gray-400">Then $4.99 per week. No payment now</span>
-            </div>
+            
+          <div
+        className="bg-black text-white rounded-lg py-2 px-5 text-lg border border-yellow-500 flex justify-between items-center cursor-pointer"
+        onClick={handleShowModal}
+      >
+        <span>7 Day Free Trial</span>
+        <span className="text-gray-400">See Course Benefits</span>
+      </div>
+
+      <Modal show={showModal} onClose={handleCloseModal} />
             <div className="bg-black text-white rounded-lg py-2 px-5 text-lg flex justify-between items-center">
               <span>Yearly Access</span>
               <span className="bg-red-500 text-white rounded-full py-1 px-3">SAVE 88%</span>
             </div>
           </div>
-          <button className="bg-[#DFB140] text-black rounded-full py-2 px-5 text-lg mt-5 hover:bg-yellow-600">
-            Try Now
-          </button>
+          <button
+          className="bg-[#DFB140] text-black rounded-full py-2 px-5 text-lg mt-5 hover:bg-yellow-600"
+          onClick={() => openNewTab(links[userData.statement])}
+        >
+          Try Now
+        </button>
         </motion.div>
       </div>
     </div>
