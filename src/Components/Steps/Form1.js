@@ -49,7 +49,7 @@ export default function Form1() {
             variants={container}
             className="button-container"
           >
-            {['Personal Goals', 'Relationship Goals', 'Academic Goals', 'Athletic Goals', 'Career Goals', 'IDK'].map((goal, index) => (
+            {['Personal Goals', 'Relationship Goals', 'Academic Goals', 'Athletic Goals', 'Career Goals', "I'm not sure"].map((goal, index) => (
               <motion.button
                 key={index}
                 variants={item}
