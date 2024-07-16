@@ -21,7 +21,7 @@ html, body {
 
 
 .main {
-  @apply w-full h-full md:w-3/4 mx-auto px-4 py-8 bg-white rounded-lg shadow-lg;
+  @apply w-full h-full md:w-3/4 mx-auto px-4 py-8 bg-white rounded-lg;
 }
 
 .main-content {
@@ -39,7 +39,7 @@ html, body {
 }
 
 .display-content {
-  @apply overflow-auto flex-1; /* Allow scrolling if content overflows */
+  @apply overflow-hidden flex-1; /* Allow scrolling if content overflows */
 }
 
 .fixed-button {
@@ -561,3 +561,9 @@ html, body {
   background: #ffcc00;
 }
 
+
+.final-c-bg{
+  background-color: white;
+  border: none;
+  @apply bg-white;
+}

@@ -13,7 +13,8 @@ module.exports = {
         pmmGold: "#BDA259",
         pmmBlue: "#9EC6CD",
         pmmRed: "#DE5950",
-        pmmSelect: "#DFB140"
+        pmmSelect: "#DFB140",
+        pmmDark: "#333"
 
       },
       backgroundImage: {

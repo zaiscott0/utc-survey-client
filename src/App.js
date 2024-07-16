@@ -46,7 +46,6 @@ function App() {
     "Experience",
     "Final Thoughts",
     "Thank You",
-    ""
   ];
 
   const api = axios.create({
@@ -70,32 +69,34 @@ function App() {
 
   const displayStep = (step) => {
     switch (step) {
+      /*
       case 1:
         getQuestionSteps();
         return <Form3 />;
-      case 2:
+      */
+      case 1:
         return <Form1 />;
-      case 3:
+      case 2:
         return <Form4 />;
-      case 4:
+      case 3:
         return <Form2 />;
-      case 5:
+      case 4:
         return <Form5 />;
-      case 6:
+      case 5:
         return <Form6 />;
-      case 7:
+      case 6:
         return <Form7 />;
-      case 8:
+      case 7:
         return <Form8 />;
-      case 9:
+      case 8:
         return <Form11 />;
-      case 10:
+      case 9:
         return <Form10 />;
-      case 11:
+      case 10:
         return <Form9 />;
-      case 12:
+      case 11:
         return <Form12 />;
-      case 13:
+      case 12:
         return <FinalForm />;
       default:
         return null;
