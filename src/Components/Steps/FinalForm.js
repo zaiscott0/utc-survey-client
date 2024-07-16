@@ -180,10 +180,11 @@ export default function FinalForm() {
 
       <button 
   onClick={handleLinkClick} 
-  className="text-xs md:text-sm bg-pmmDark hover:bg-pmmGold text-white font-black py-3 px-4 rounded inline-flex items-center mt-4 mx-2"
+  className="text-xs md:text-sm bg-pmmDark hover:bg-pmmGold text-white font-black py-2 px-3 rounded inline-flex items-center mt-3 mx-2"
 >
   Take the Course
 </button>
+
 
 
     </motion.div>
