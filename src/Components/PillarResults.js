@@ -25,24 +25,26 @@ const PillarResults = ({ data }) => {
   variants={containerVariants}
   initial="hidden"
   animate="visible"
-  className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2"
+  className="grid grid-cols-1 md:grid-cols-2 gap-2 p-1"
 >
   {data.map((item, index) => (
     <motion.div
       key={index}
       variants={itemVariants}
-      className="bg-gray-200 p-3 rounded-lg shadow-md transform transition-all hover:scale-105"
+      className="bg-gray-200 p-2 rounded-lg shadow-md transform transition-all hover:scale-105"
     >
-      <p className="text-gray-700 text-xs font-light">
-  <span className="inline-block w-4 h-4 mr-2 bg-pmmGold text-white rounded-full flex items-center justify-center">
-    {index + 1}
-  </span>
-  {item}
-</p>
-
+      <p className="text-gray-600 text-xs md:text-sm font-light">
+        <span className="inline-block w-4 h-4 md:w-5 md:h-5 mr-2 bg-pmmGold text-white rounded-full flex items-center justify-center">
+          {index + 1}
+        </span>
+        {item}
+      </p>
     </motion.div>
   ))}
 </motion.div>
+
+
+
 
 
   );
