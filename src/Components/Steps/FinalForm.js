@@ -3,6 +3,7 @@ import { StepperContext } from '../../contexts/StepperContext';
 import axios from 'axios';
 import { motion } from "framer-motion";
 import PillarResults from '../PillarResults';
+//import './FinalForm.css'; // Assuming you have a CSS file for additional styling
 
 const api = axios.create({
   baseURL: `https://utc-survey-api-1.onrender.com/user`
@@ -84,8 +85,7 @@ const statement2pillar = {
 const containerVariants = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
-    opacity: 1,
-    scale: 1,
+    opacity: 1, scale: 1,
     transition: {
       delayChildren: 0.7,
       staggerChildren: 1.3
@@ -96,8 +96,7 @@ const containerVariants = {
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
-    y: 0,
-    opacity: 1
+    y: 0, opacity: 1
   }
 };
 
@@ -129,63 +128,60 @@ export default function FinalForm() {
   };
 
   return (
-<div className="flex justify-center items-center h-full p-4 bg-white">
-  <motion.div 
-    className="w-full max-w-2xl bg-white rounded-lg  p-8"
-    animate="visible"
-    initial="hidden"
-    variants={containerVariants}
-  >
-    <div className="flex flex-col md:flex-row items-center md:space-x-10 bg-white rounded-lg">
-      <motion.img
-        variants={itemVariants}
-        className="w-32 h-32 rounded-full border-4 border-pmmGold mb-6 md:mb-0"
-        src="https://uploads-ssl.webflow.com/65fded56193c91c4ae0eb328/662c1a8c2c50441c8e78a7df_Freddie-Scott-Avatar.jpg"
-        alt="Coach Freddie Scott"
-      />
+    <div className="flex justify-center items-center h-full p-4 bg-white overflow-auto">
       <motion.div 
-        variants={itemVariants} 
-        className="text-gray-800 text-center md:text-left md:flex-grow"
+        className="w-full max-w-2xl bg-white rounded-lg p-8"
+        animate="visible"
+        initial="hidden"
+        variants={containerVariants}
       >
-        <p className="text-lg font-semibold mb-4 leading-relaxed">
-          I'm <span className="text-pmmGrit">Freddie Scott</span>, former <span className="text-pmmGrit">Pro Athlete</span>, <span className="text-pmmGrit">Transition Coach</span>, and <span className="text-pmmGrit">Advocate</span> for your success in our community.
-        </p>
-        <p className="text-lg font-semibold mb-4 leading-relaxed">
-          Based on your responses, I recommend starting with our
-          <span className="inline-block bg-pmmGrit text-white px-4 py-2 rounded-full font-bold mx-2 transform transition duration-300 hover:scale-105">
-            {statement2pillar[userData.statement]}
-          </span>
-          course.
-        </p>
-        <p className="text-sm leading-relaxed">
-          Reflect on these tips for a better course experience.
-        </p>
+        <div className=" flex flex-col md:flex-row items-center md:space-x-10 bg-white rounded-lg">
+          <motion.img
+            variants={itemVariants}
+            className="w-32 h-32 rounded-full border-4 border-pmmGold mb-6 md:mb-0"
+            src="https://uploads-ssl.webflow.com/65fded56193c91c4ae0eb328/662c1a8c2c50441c8e78a7df_Freddie-Scott-Avatar.jpg"
+            alt="Coach Freddie Scott"
+          />
+          <motion.div 
+            variants={itemVariants} 
+            className="text-gray-800 text-center md:text-left md:flex-grow"
+          >
+<p className="text-sm font-medium mb-2 leading-snug border-b border-gray-300 pb-2">
+  I'm <span className="text-pmmGrit">Freddie Scott</span>, former <span className="text-pmmGrit">Pro Athlete</span>, <span className="text-pmmGrit">Transition Coach</span>, and <span className="text-pmmGrit">Advocate</span> for your success in our community.
+</p>
+
+
+            <p className=" border-b border-gray-300 pb-2 text-lg font-semibold mb-4 leading-relaxed">
+              Based on your responses, I recommend starting with our
+              <span className="inline-block bg-pmmGrit text-white px-4 py-2 rounded-full font-bold mx-2 transform transition duration-300 hover:scale-105">
+                {statement2pillar[userData.statement]}
+              </span>
+              course.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Reflect on these tips for a better course experience.
+            </p>
+          </motion.div>
+        </div>
+
+        <motion.div 
+          variants={itemVariants} 
+          animate="visible" 
+          initial="hidden" 
+          className="mt-6 text-sm"
+        >
+          {strategies[userData.statement] && <PillarResults data={strategies[userData.statement]} />}
+        </motion.div>
+
+        <div className="flex justify-center mt-8">
+          <button 
+            onClick={handleLinkClick} 
+            className="text-sm md:text-base bg-pmmGrit hover:bg-pmmBlue text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Take the Course
+          </button>
+        </div>
       </motion.div>
     </div>
-
-    <motion.div 
-      variants={itemVariants} 
-      animate="visible" 
-      initial="hidden" 
-      className="mt-6 text-sm"
-    >
-      {strategies[userData.statement] && <PillarResults data={strategies[userData.statement]} />}
-    </motion.div>
-
-    <div className="flex justify-center mt-8">
-      <button 
-        onClick={handleLinkClick} 
-        className="text-sm md:text-base bg-pmmGrit hover:bg-pmmBlue text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
-      >
-        Take the Course
-      </button>
-    </div>
-  </motion.div>
-</div>
-
-
-
-
-  
   );
 }
