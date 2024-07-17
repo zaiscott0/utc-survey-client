@@ -25,7 +25,7 @@ const PillarResults = ({ data }) => {
   variants={containerVariants}
   initial="hidden"
   animate="visible"
-  className="grid grid-cols-1 md:grid-cols-2 gap-2 p-1"
+  className="grid grid-cols-1 md:grid-cols-2 gap-2 p-1 max-w-full"
 >
   {data.map((item, index) => (
     <motion.div
@@ -34,12 +34,12 @@ const PillarResults = ({ data }) => {
       className="bg-gray-200 p-2 rounded-lg shadow-md transform transition-all hover:scale-105"
     >
       <p className="text-sm font-light text-gray-600">
-     
         {item}
       </p>
     </motion.div>
   ))}
 </motion.div>
+
 
 
 
