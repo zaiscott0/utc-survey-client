@@ -114,6 +114,9 @@ function App() {
     setAnimationComplete(true); // Mark animation as complete
   };
 
+  console.log("CURRENTSTEP: ", currStep);
+  console.log("total step: ", steps.length - 1);
+
   return (
     <div className="App">
       <AnimatePresence>
@@ -133,7 +136,10 @@ function App() {
             <div className="container main-content">
               {/* STEPPER */}
               
-              <FormStepper steps={steps} currStep={currStep} />
+              {currStep !== steps.length && (
+  <FormStepper steps={steps} currStep={currStep} />
+)}
+
               
               {/* DISPLAY FORMS */}
               <div className="my-1 p-4 display-content">
