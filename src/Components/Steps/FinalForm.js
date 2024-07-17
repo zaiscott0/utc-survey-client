@@ -153,7 +153,7 @@ export default function FinalForm() {
 
 <p className="text-sm font-medium mb-2 leading-snug border-b border-gray-300 pb-2">
   Based on your responses, I recommend starting with our{' '}
-  <span className="inline-block bg-pmmGrit text-white px-4 py-2 rounded-full font-bold mx-2 transform transition duration-300 hover:scale-105">
+  <span onClick={handleLinkClick} className="inline-block bg-pmmGrit text-white px-4 py-2 rounded-full font-bold mx-2 transform transition duration-300 hover:scale-105">
     {statement2pillar[userData.statement]}
   </span>{' '}
   course.
