@@ -33,15 +33,14 @@ const PillarResults = ({ data }) => {
       variants={itemVariants}
       className="bg-gray-200 p-2 rounded-lg shadow-md transform transition-all hover:scale-105"
     >
-      <p className="text-gray-600 text-xs md:text-sm font-light">
-        <span className="inline-block w-4 h-4 md:w-5 md:h-5 mr-2 bg-pmmGold text-white rounded-full flex items-center justify-center">
-          {index + 1}
-        </span>
+      <p className="text-sm font-light text-gray-600">
+     
         {item}
       </p>
     </motion.div>
   ))}
 </motion.div>
+
 
 
 
