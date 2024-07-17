@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import './FormStepper.css';
 
 export default function FormStepper({ steps, currStep }) {
   const [newStep, setNewStep] = useState([]);
@@ -25,21 +26,27 @@ export default function FormStepper({ steps, currStep }) {
     setNewStep(updateStep(currStep - 1, stepRef.current));
   }, [steps, currStep]);
 
+  const getDisplayedSteps = () => {
+    const start = Math.max(0, currStep - 2); // Ensure start is not less than 0
+    const end = Math.min(start + 3, steps.length); // Ensure end does not exceed steps length
+    return newStep.slice(start, end);
+  };
+
+  const displayedSteps = getDisplayedSteps();
+
   return (
-    <motion.div className='FormContainer'>
-      {newStep.map((step, index) => (
-        <div key={index} className={`flex items-center ${index !== newStep.length - 1 ? 'w-full' : ''}`}>
-          <div className='DisplayContainer'>
-            <div className={`formNumber ${step.selected ? 'bg-pmmGrit text-white font-bold border border-blue-600' : ''}`}>
-              {step.completed ? (
-                <span className='text-white font-bold text-xl'>&#10003;</span>
-              ) : (
-                index + 1
-              )}
-            </div>
+    <motion.div className='form-stepper-container'>
+      {displayedSteps.map((step, index) => (
+        <div key={index} className={`step-wrapper ${index !== displayedSteps.length - 1 ? 'flex-grow' : ''}`}>
+          <div className={`step-number ${step.selected ? 'step-number-selected' : ''}`}>
+            {step.completed ? (
+              <span className='checkmark'>&#10003;</span>
+            ) : (
+              newStep.indexOf(step) + 1 // Display the correct step number
+            )}
           </div>
-          {index !== newStep.length - 1 && (
-            <div className={`formLine ${step.completed ? 'border-pmmGrit' : 'border-gray-300'}`}></div>
+          {index !== displayedSteps.length - 1 && (
+            <div className={`step-line ${step.completed ? 'step-line-completed' : ''}`}></div>
           )}
         </div>
       ))}

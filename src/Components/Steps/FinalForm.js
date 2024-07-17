@@ -129,67 +129,61 @@ export default function FinalForm() {
   };
 
   return (
-<div className="form-c">
-  <div className="form-box">
-    <motion.div 
-      className="form-input final-c-bg p-3 max-w-xs mx-auto" 
-      animate="visible" 
-      initial="hidden" 
-      variants={containerVariants}
-    >
-      <motion.div 
-        className="flex flex-col items-center space-y-2 p-3 bg-white rounded-lg "
-        variants={containerVariants}
-      >
-        <motion.img
-          variants={itemVariants}
-          className="w-12 h-12 rounded-full border-2 border-gray-300"
-          src="https://uploads-ssl.webflow.com/65fded56193c91c4ae0eb328/662c1a8c2c50441c8e78a7df_Freddie-Scott-Avatar.jpg"
-          alt="Coach Freddie Scott"
-        />
-
-<motion.div 
-  variants={itemVariants} 
-  className="text-gray-700 text-center text-xs leading-tight space-y-3"
->
-<p>
-  I'm <span className="font-bold text-pmmGold">Freddie Scott</span>, former 
-  <span className="font-bold text-pmmGold"> Pro Athlete</span>, 
-  <span className="font-bold text-pmmGold"> Transition Coach</span>, and 
-  <span className="font-bold text-pmmGold"> Advocate</span> for your success in our community.
-</p>
-  <p>Based on your responses, I recommend starting with our
-  <span className="inline-block bg-pmmGold text-white px-2 py-1 rounded-lg font-bold mx-1">
-    {statement2pillar[userData.statement]}
-  </span> course.
-</p>
-  <p>Reflect on these tips for a better course experience.</p>
-</motion.div>
-
-
-      </motion.div>
-
+<div className="flex justify-center items-center h-full p-4 bg-white">
+  <motion.div 
+    className="w-full max-w-2xl bg-white rounded-lg  p-8"
+    animate="visible"
+    initial="hidden"
+    variants={containerVariants}
+  >
+    <div className="flex flex-col md:flex-row items-center md:space-x-10 bg-white rounded-lg">
+      <motion.img
+        variants={itemVariants}
+        className="w-32 h-32 rounded-full border-4 border-pmmGold mb-6 md:mb-0"
+        src="https://uploads-ssl.webflow.com/65fded56193c91c4ae0eb328/662c1a8c2c50441c8e78a7df_Freddie-Scott-Avatar.jpg"
+        alt="Coach Freddie Scott"
+      />
       <motion.div 
         variants={itemVariants} 
-        animate="visible" 
-        initial="hidden" 
-        className="mt-2 text-xs"
+        className="text-gray-800 text-center md:text-left md:flex-grow"
       >
-        {strategies[userData.statement] && <PillarResults data={strategies[userData.statement]} />}
+        <p className="text-lg font-semibold mb-4 leading-relaxed">
+          I'm <span className="text-pmmGrit">Freddie Scott</span>, former <span className="text-pmmGrit">Pro Athlete</span>, <span className="text-pmmGrit">Transition Coach</span>, and <span className="text-pmmGrit">Advocate</span> for your success in our community.
+        </p>
+        <p className="text-lg font-semibold mb-4 leading-relaxed">
+          Based on your responses, I recommend starting with our
+          <span className="inline-block bg-pmmGrit text-white px-4 py-2 rounded-full font-bold mx-2 transform transition duration-300 hover:scale-105">
+            {statement2pillar[userData.statement]}
+          </span>
+          course.
+        </p>
+        <p className="text-sm leading-relaxed">
+          Reflect on these tips for a better course experience.
+        </p>
       </motion.div>
+    </div>
 
-      <button 
-  onClick={handleLinkClick} 
-  className="text-xs md:text-sm bg-pmmDark hover:bg-pmmGold text-white font-black py-2 px-3 rounded inline-flex items-center mt-3 mx-2"
->
-  Take the Course
-</button>
-
-
-
+    <motion.div 
+      variants={itemVariants} 
+      animate="visible" 
+      initial="hidden" 
+      className="mt-6 text-sm"
+    >
+      {strategies[userData.statement] && <PillarResults data={strategies[userData.statement]} />}
     </motion.div>
-  </div>
+
+    <div className="flex justify-center mt-8">
+      <button 
+        onClick={handleLinkClick} 
+        className="text-sm md:text-base bg-pmmGrit hover:bg-pmmBlue text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+      >
+        Take the Course
+      </button>
+    </div>
+  </motion.div>
 </div>
+
+
 
 
   
