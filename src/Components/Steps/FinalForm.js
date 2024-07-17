@@ -61,14 +61,14 @@ const strategies = {
 };
 
 const links = {
-  "Thoughts/Feelings": "https://learn.pivotalmomentsmedia.com/courses/bepresent",
-  "Fires": "https://learn.pivotalmomentsmedia.com/courses/beafirefighter",
-  "Control": "https://learn.pivotalmomentsmedia.com/courses/beanauthor",
-  "Focus": "https://learn.pivotalmomentsmedia.com/courses/beapilot",
-  "Help-Me": "https://learn.pivotalmomentsmedia.com/courses/beamanager",
-  "Action-Plan": "https://learn.pivotalmomentsmedia.com/courses/beintentional",
-  "Adjusting": "https://learn.pivotalmomentsmedia.com/courses/beagile",
-  "Help-Others": "https://learn.pivotalmomentsmedia.com/courses/bealifeguard"
+  "Thoughts/Feelings": "https://learn.liveprosperous.com/courses/bepresent",
+  "Fires": "https://learn.liveprosperous.com/courses/beafirefighter",
+  "Control": "https://learn.liveprosperous.com/courses/beanauthor",
+  "Focus": "https://learn.liveprosperous.com/courses/beintentional",
+  "Help-Me": "https://learn.liveprosperous.com/courses/beamanager",
+  "Action-Plan": "https://learn.liveprosperous.com/courses/beapilot",
+  "Adjusting": "https://learn.liveprosperous.com/courses/beagile",
+  "Help-Others": "https://learn.liveprosperous.com/courses/bealifeguard"
 };
 
 const statement2pillar = {
