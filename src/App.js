@@ -132,8 +132,9 @@ function App() {
           >
             <div className="container main-content">
               {/* STEPPER */}
+              
               <FormStepper steps={steps} currStep={currStep} />
-
+              
               {/* DISPLAY FORMS */}
               <div className="my-1 p-4 display-content">
                 <StepperContext.Provider

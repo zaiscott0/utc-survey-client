@@ -39,7 +39,7 @@ html, body {
 }
 
 .display-content {
-  @apply overflow-hidden flex-1; /* Allow scrolling if content overflows */
+  @apply overflow-auto flex-1; /* Allow scrolling if content overflows */
 }
 
 .fixed-button {
