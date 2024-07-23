@@ -129,10 +129,10 @@ export default function FinalForm() {
 
   return (
     <div>
-<div className="flex flex-col md:flex-row items-center md:space-x-10 bg-white rounded-lg">
+<div className="flex flex-col md:flex-column md:pt-8 items-center md:space-x-10 bg-white rounded-lg">
   <motion.img
     variants={itemVariants}
-    className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-pmmGold mb-6 md:mb-0"
+    className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-pmmGold mb-6 md:mb-6"
     src="https://uploads-ssl.webflow.com/65fded56193c91c4ae0eb328/662c1a8c2c50441c8e78a7df_Freddie-Scott-Avatar.jpg"
     alt="Coach Freddie Scott"
   />
@@ -141,20 +141,20 @@ export default function FinalForm() {
     variants={itemVariants} 
     className="text-gray-800 text-center md:text-left md:flex-grow"
   >
-    <p className="text-center text-sm font-medium mb-2 leading-snug border-b border-gray-300 pb-2">
-      I'm <span className="text-pmmGrit">Freddie Scott</span>, former <span className="text-pmmGrit">Pro Athlete</span>, <span className="text-pmmGrit">Transition Coach</span>, and <span className="text-pmmGrit">Advocate</span> for your success in our community.
-    </p>
+    <p className="text-center text-sm lg:text-lg font-medium mb-2 leading-snug pb-0">
+      I'm <span className="">Freddie Scott</span>, former <span className="">Pro Athlete</span>, <span className="">Transition Coach</span>, and <span className="">Advocate</span> for your success.
 
-    <p className="text-center text-sm font-medium mb-2 leading-snug border-b border-gray-300 pb-2">
-      Based on your responses, I recommend starting with our{' '}
-      <span onClick={handleLinkClick} className="inline-block bg-pmmGrit text-white px-4 py-2 rounded-full font-bold mx-2 transform transition duration-300 hover:scale-105">
+
+
+      I'd like you to start with our{' '}
+      <span onClick={handleLinkClick} className="inline-block text-pmmGrit px-0 py-0 rounded-full font-bold mx-2 transform transition duration-300 hover:scale-105">
         {statement2pillar[userData.statement]}
       </span>{' '}
       course.
-    </p>
 
-    <p className="text-center text-sm leading-relaxed">
-      Reflect on these tips for a better course experience.
+
+
+      To start, reflect on these key points.
     </p>
   </motion.div>
 </div>

@@ -92,7 +92,7 @@ html, body {
 }
 
 .StepperControlContainer{
-  @apply flex justify-around mt-4 mb-8;
+  @apply flex justify-around mt-2 mb-4;
 }
 
 /* Styling for the continue button */
@@ -216,6 +216,13 @@ html, body {
   /*background-color: #000;*/
   color: #000;
   @apply bg-white;
+}
+
+/* Adjust font size for screens smaller than 768px */
+@media (max-width: 768px) {
+  .form-container {
+    margin-top: 0px;
+  }
 }
 
 .form-box {
@@ -471,6 +478,10 @@ html, body {
 
 .bg-blue-200 {
   background-color: #bfdbfe;
+}
+
+.bg-purple-200 {
+  background-color:#3680A2;
 }
 
 
