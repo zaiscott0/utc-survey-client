@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        pmmGrit: "#DFB13F",
+        pmmGrit: "#0279FF", // brand color changed to blue
         pmmEvry1: "#3D8C9B",
         pmmResilience: "#510221",
         pmmSilver: "#929191",
         pmmGreen: "#494B31",
         pmmTan: "#C4BAAF",
-        pmmGold: "#BDA259",
+        pmmGold: "#00E02B", // brand color changed to green
         pmmBlue: "#9EC6CD",
         pmmRed: "#DE5950",
         pmmSelect: "#DFB140",
