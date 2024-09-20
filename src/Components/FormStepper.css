@@ -30,7 +30,7 @@
   .step-number-selected {
     /*background-color: #ffc107; /* Change to the color you want for the selected step */
     color: #fff;
-    @apply bg-pmmGrit;
+    @apply bg-pmmGold;
   }
   
   .step-line {
@@ -41,7 +41,7 @@
   }
   
   .step-line-completed {
-    background-color: #ffc107; /* Change to the color you want for the completed step */
+    @apply bg-pmmGold; /* Change to the color you want for the completed step */
     
   }
   

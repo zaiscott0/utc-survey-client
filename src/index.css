@@ -107,9 +107,9 @@ html, body {
 
 /* Hover state */
 .continue-button:hover {
-  background-color: #c99b30; /* Slightly darker shade */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transform: translateY(-3px);
+  @apply bg-pmmGrit
 }
 
 /* Hover state animation */
