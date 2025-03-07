@@ -112,7 +112,12 @@ export default function FinalForm() {
 
   useEffect(() => {
     const addUser = async () => {
-      const res = await api.post("/", userData);
+      const isolatedUserData = {
+        ...userData,
+        dbTable: "PSUSA"
+      };
+      console.log("HERE IS THE USER DATA...", isolatedUserData);
+      const res = await api.post("/", isolatedUserData);
       console.log("HERE IS THE RESPONSE...", res);
     };
     addUser();

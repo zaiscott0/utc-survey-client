@@ -38,10 +38,10 @@ export default function Form10() {
   const buttonOptions = [
     { value: "Significance/Purpose", label: "Lack of Purpose" },
     { value: "Personal/Finances", label: "Personal / Financial Loss" },
-    { value: "Divorce", label: "Divorce" },
-    { value: "Time-Management", label: "Lack of Time Management" },
+    { value: "Relationship Struggles", label: "Relationship Struggles" },
+    { value: "Overwhelmed", label: "Overwhelmed" },
     { value: "Physical-Challenge", label: "Physical Challenges" },
-    { value: "Depression", label: "Depression" },
+    { value: "Sadness", label: "Sadness" },
     { value: "Anger", label: "Anger" },
     { value: "Substance-Abuse", label: "Substance Abuse" },
   ];
